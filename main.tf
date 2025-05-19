@@ -488,7 +488,7 @@ resource "azurerm_dns_a_record" "frontend" {
   zone_name           = "vidyapractice.shop"
   resource_group_name = "Project"
   ttl                 = 3
-  records             = [azurerm_public_ip.frontend.private_ip_address]
+  records             = azurerm_public_ip.frontend.private_ip_address
 }
 
 resource "azurerm_dns_a_record" "catalogue" {
@@ -496,7 +496,7 @@ resource "azurerm_dns_a_record" "catalogue" {
   zone_name           = "vidyapractice.shop"
   resource_group_name = "Project"
   ttl                 = 3
-  records             = [azurerm_public_ip.catalogue.private_ip_address]
+  records             = azurerm_public_ip.catalogue.private_ip_address
 }
 
 resource "azurerm_dns_a_record" "mongodb" {
@@ -504,7 +504,7 @@ resource "azurerm_dns_a_record" "mongodb" {
   zone_name           = "vidyapractice.shop"
   resource_group_name = "Project"
   ttl                 = 3
-  records             = [azurerm_public_ip.mongodb.private_ip_address]
+  records             = azurerm_public_ip.mongodb.private_ip_address
 }
 
 resource "azurerm_dns_a_record" "redis" {
@@ -512,7 +512,7 @@ resource "azurerm_dns_a_record" "redis" {
   zone_name           = "vidyapractice.shop"
   resource_group_name = "Project"
   ttl                 = 3
-  records             = [azurerm_public_ip.redis.private_ip_address]
+  records             = azurerm_public_ip.redis.private_ip_address
 }
 
 resource "azurerm_dns_a_record" "rabbitmq" {
@@ -520,7 +520,7 @@ resource "azurerm_dns_a_record" "rabbitmq" {
   zone_name           = "vidyapractice.shop"
   resource_group_name = "Project"
   ttl                 = 3
-  records             = [azurerm_public_ip.rabbitmq.private_ip_address]
+  records             = azurerm_public_ip.rabbitmq.private_ip_address
 }
 
 resource "azurerm_dns_a_record" "mysql" {
@@ -528,7 +528,7 @@ resource "azurerm_dns_a_record" "mysql" {
   zone_name           = "vidyapractice.shop"
   resource_group_name = "Project"
   ttl                 = 3
-  records             = [azurerm_public_ip.mysql.private_ip_address]
+  records             = azurerm_public_ip.mysql.private_ip_address
 }
 
 
@@ -537,7 +537,7 @@ resource "azurerm_dns_a_record" "user" {
   zone_name           = "vidyapractice.shop"
   resource_group_name = "Project"
   ttl                 = 3
-  records             = [azurerm_public_ip.user.private_ip_address]
+  records             = azurerm_public_ip.user.private_ip_address
 }
 
 resource "azurerm_dns_a_record" "cart" {
@@ -545,7 +545,7 @@ resource "azurerm_dns_a_record" "cart" {
   zone_name           = "vidyapractice.shop"
   resource_group_name = "Project"
   ttl                 = 3
-  records             = [azurerm_public_ip.cart.private_ip_address]
+  records             = azurerm_public_ip.cart.private_ip_address
 }
 
 resource "azurerm_dns_a_record" "shipping" {
@@ -553,7 +553,7 @@ resource "azurerm_dns_a_record" "shipping" {
   zone_name           = "vidyapractice.shop"
   resource_group_name = "Project"
   ttl                 = 3
-  records             = [azurerm_public_ip.shipping.private_ip_address]
+  records             = azurerm_public_ip.shipping.private_ip_address
 }
 
 resource "azurerm_dns_a_record" "payment" {
@@ -561,5 +561,5 @@ resource "azurerm_dns_a_record" "payment" {
   zone_name           = "vidyapractice.shop"
   resource_group_name = "Project"
   ttl                 = 3
-  records             = [azurerm_public_ip.payment.private_ip_address]
+  records             = azurerm_public_ip.payment.private_ip_address
 }
