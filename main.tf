@@ -18,7 +18,7 @@ resource "azurerm_network_interface" "frontend" {
     name                          = "frontend"
     subnet_id                     = "/subscriptions/72129bc2-1be7-4c6e-971e-9375ebd6c232/resourceGroups/Project/providers/Microsoft.Network/virtualNetworks/Project-VN/subnets/default"
     private_ip_address_allocation = "Dynamic"
-    public_ip_address_id = [azurerm_public_ip.frontend.id]
+    public_ip_address_id = azurerm_public_ip.frontend.id
   }
 }
 
@@ -66,7 +66,7 @@ resource "azurerm_network_interface" "mongodb" {
     name                          = "mongodb"
     subnet_id                     = "/subscriptions/72129bc2-1be7-4c6e-971e-9375ebd6c232/resourceGroups/Project/providers/Microsoft.Network/virtualNetworks/Project-VN/subnets/default"
     private_ip_address_allocation = "Dynamic"
-    public_ip_address_id = [azurerm_public_ip.mongodb.id]
+    public_ip_address_id = azurerm_public_ip.mongodb.id
   }
 }
 
@@ -114,7 +114,7 @@ resource "azurerm_network_interface" "catalogue" {
     name                          = "catalogue"
     subnet_id                     = "/subscriptions/72129bc2-1be7-4c6e-971e-9375ebd6c232/resourceGroups/Project/providers/Microsoft.Network/virtualNetworks/Project-VN/subnets/default"
     private_ip_address_allocation = "Dynamic"
-    public_ip_address_id = [azurerm_public_ip.catalogue.id]
+    public_ip_address_id = azurerm_public_ip.catalogue.id
   }
 }
 
@@ -162,7 +162,7 @@ resource "azurerm_network_interface" "redis" {
     name                          = "redis"
     subnet_id                     = "/subscriptions/72129bc2-1be7-4c6e-971e-9375ebd6c232/resourceGroups/Project/providers/Microsoft.Network/virtualNetworks/Project-VN/subnets/default"
     private_ip_address_allocation = "Dynamic"
-    public_ip_address_id = [azurerm_public_ip.redis.id]
+    public_ip_address_id = azurerm_public_ip.redis.id
   }
 }
 
@@ -210,7 +210,7 @@ resource "azurerm_network_interface" "user" {
     name                          = "user"
     subnet_id                     = "/subscriptions/72129bc2-1be7-4c6e-971e-9375ebd6c232/resourceGroups/Project/providers/Microsoft.Network/virtualNetworks/Project-VN/subnets/default"
     private_ip_address_allocation = "Dynamic"
-    public_ip_address_id = [azurerm_public_ip.user.id]
+    public_ip_address_id = azurerm_public_ip.user.id
   }
 }
 
@@ -258,7 +258,7 @@ resource "azurerm_network_interface" "cart" {
     name                          = "cart"
     subnet_id                     = "/subscriptions/72129bc2-1be7-4c6e-971e-9375ebd6c232/resourceGroups/Project/providers/Microsoft.Network/virtualNetworks/Project-VN/subnets/default"
     private_ip_address_allocation = "Dynamic"
-    public_ip_address_id = [azurerm_public_ip.cart.id]
+    public_ip_address_id = azurerm_public_ip.cart.id
   }
 }
 
@@ -306,7 +306,7 @@ resource "azurerm_network_interface" "mysql" {
     name                          = "mysql"
     subnet_id                     = "/subscriptions/72129bc2-1be7-4c6e-971e-9375ebd6c232/resourceGroups/Project/providers/Microsoft.Network/virtualNetworks/Project-VN/subnets/default"
     private_ip_address_allocation = "Dynamic"
-    public_ip_address_id = [azurerm_public_ip.mysql.id]
+    public_ip_address_id = azurerm_public_ip.mysql.id
   }
 }
 
@@ -354,7 +354,7 @@ resource "azurerm_network_interface" "shipping" {
     name                          = "shipping"
     subnet_id                     = "/subscriptions/72129bc2-1be7-4c6e-971e-9375ebd6c232/resourceGroups/Project/providers/Microsoft.Network/virtualNetworks/Project-VN/subnets/default"
     private_ip_address_allocation = "Dynamic"
-    public_ip_address_id = [azurerm_public_ip.shipping.id]
+    public_ip_address_id = azurerm_public_ip.shipping.id
   }
 }
 
@@ -402,7 +402,7 @@ resource "azurerm_network_interface" "rabbitmq" {
     name                          = "rabbitmq"
     subnet_id                     = "/subscriptions/72129bc2-1be7-4c6e-971e-9375ebd6c232/resourceGroups/Project/providers/Microsoft.Network/virtualNetworks/Project-VN/subnets/default"
     private_ip_address_allocation = "Dynamic"
-    public_ip_address_id = [azurerm_public_ip.rabbitmq.id]
+    public_ip_address_id = azurerm_public_ip.rabbitmq.id
   }
 }
 
@@ -450,7 +450,7 @@ resource "azurerm_network_interface" "payment" {
     name                          = "payment"
     subnet_id                     = "/subscriptions/72129bc2-1be7-4c6e-971e-9375ebd6c232/resourceGroups/Project/providers/Microsoft.Network/virtualNetworks/Project-VN/subnets/default"
     private_ip_address_allocation = "Dynamic"
-    public_ip_address_id = [azurerm_public_ip.payment.id]
+    public_ip_address_id = azurerm_public_ip.payment.id
   }
 }
 
