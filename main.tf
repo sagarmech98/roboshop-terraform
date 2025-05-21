@@ -7,6 +7,7 @@ module "frontend" {
   storage_image_reference_id = var.storage_image_reference_id
   ip_configuration_subnet_id = var.ip_configuration_subnet_id
   zone_name                  = var.zone_name
+  network_security_group_id  = var.network_security_group_id
 }
 
 
@@ -18,6 +19,7 @@ module "mongodb" {
   storage_image_reference_id = var.storage_image_reference_id
   ip_configuration_subnet_id = var.ip_configuration_subnet_id
   zone_name                  = var.zone_name
+  network_security_group_id  = var.network_security_group_id
 }
 
 module "catalogue" {
@@ -28,6 +30,7 @@ module "catalogue" {
   storage_image_reference_id = var.storage_image_reference_id
   ip_configuration_subnet_id = var.ip_configuration_subnet_id
   zone_name                  = var.zone_name
+  network_security_group_id  = var.network_security_group_id
 }
 
 module "user" {
@@ -38,6 +41,7 @@ module "user" {
   storage_image_reference_id = var.storage_image_reference_id
   ip_configuration_subnet_id = var.ip_configuration_subnet_id
   zone_name                  = var.zone_name
+  network_security_group_id  = var.network_security_group_id
 }
 
 module "redis" {
@@ -48,6 +52,7 @@ module "redis" {
   storage_image_reference_id = var.storage_image_reference_id
   ip_configuration_subnet_id = var.ip_configuration_subnet_id
   zone_name                  = var.zone_name
+  network_security_group_id  = var.network_security_group_id
 }
 
 module "cart" {
@@ -58,6 +63,7 @@ module "cart" {
   storage_image_reference_id = var.storage_image_reference_id
   ip_configuration_subnet_id = var.ip_configuration_subnet_id
   zone_name                  = var.zone_name
+  network_security_group_id  = var.network_security_group_id
 }
 
 module "mysql" {
@@ -68,6 +74,7 @@ module "mysql" {
   storage_image_reference_id = var.storage_image_reference_id
   ip_configuration_subnet_id = var.ip_configuration_subnet_id
   zone_name                  = var.zone_name
+  network_security_group_id  = var.network_security_group_id
 }
 
 module "shipping" {
@@ -78,6 +85,7 @@ module "shipping" {
   storage_image_reference_id = var.storage_image_reference_id
   ip_configuration_subnet_id = var.ip_configuration_subnet_id
   zone_name                  = var.zone_name
+  network_security_group_id  = var.network_security_group_id
 }
 
 module "rabbitmq" {
@@ -88,4 +96,5 @@ module "rabbitmq" {
   storage_image_reference_id = var.storage_image_reference_id
   ip_configuration_subnet_id = var.ip_configuration_subnet_id
   zone_name                  = var.zone_name
+  network_security_group_id  = var.network_security_group_id
 }
