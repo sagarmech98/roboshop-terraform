@@ -54,7 +54,7 @@ resource "azurerm_virtual_machine" "vm" {
   }
 }
 
-resource "null_resource" "ansible" {
+resource "null_resource" "anisble" {
 depends_on = [
   azurerm_virtual_machine.vm
   ]
