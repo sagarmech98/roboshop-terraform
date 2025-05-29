@@ -55,7 +55,7 @@ resource "azurerm_virtual_machine" "vm" {
 }
 
 resource "null_resource" "anisble" {
-depends_on = [
+  depends_on = [
   azurerm_virtual_machine.vm
   ]
    connection {
