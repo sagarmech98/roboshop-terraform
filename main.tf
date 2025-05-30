@@ -98,3 +98,14 @@ module "rabbitmq" {
   zone_name                  = var.zone_name
   network_security_group_id  = var.network_security_group_id
 }
+
+module "payment" {
+  source                     = "./component"
+  name                       = "payment"
+  location                   = var.location
+  rg_name                    = var.rg_name
+  storage_image_reference_id = var.storage_image_reference_id
+  ip_configuration_subnet_id = var.ip_configuration_subnet_id
+  zone_name                  = var.zone_name
+  network_security_group_id  = var.network_security_group_id
+}
