@@ -9,6 +9,6 @@ terraform {
 }
 
 provider "vault" {
-  address = "http://vault.rdevopsb84.online:8200"
-  token = var.token
+  address = "http://vault.vidyapractice.shop:8200"
+  token   = var.token
 }
