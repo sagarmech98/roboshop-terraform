@@ -1,4 +1,3 @@
-
 variable "ip_configuration_subnet_id" {}
 variable "zone_name" {}
 variable "storage_image_reference_id" {}
@@ -8,3 +7,4 @@ variable "applications" {}
 variable "rg_name" {}
 variable "env" {}
 variable "dns_record_rg_name" {}
+variable "token" {}

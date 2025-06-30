@@ -45,8 +45,8 @@ resource "azurerm_virtual_machine" "vm" {
 
   os_profile {
     computer_name  = var.name
-    admin_username = "testing"
-    admin_password = "Password@1234"
+    admin_username = data.vault_generic_secret.ssh.data["username"]
+    admin_password = data.vault_generic_secret.ssh.data["password"]
   }
 
   os_profile_linux_config {
@@ -54,25 +54,25 @@ resource "azurerm_virtual_machine" "vm" {
   }
 }
 
-resource "null_resource" "anisble" {
-  depends_on = [
-  azurerm_virtual_machine.vm
-  ]
-   connection {
-    type     = "ssh"
-    user     = "testing"
-    password = "Password@1234"
-    host     =  azurerm_network_interface.privateip.private_ip_address
-  }
+# resource "null_resource" "anisble" {
+#   depends_on = [
+#   azurerm_virtual_machine.vm
+#   ]
+#    connection {
+#     type     = "ssh"
+#     user     = data.vault_generic_secret.ssh.data["username"]
+#     password = data.vault_generic_secret.ssh.data["password"]
+#     host     =  azurerm_network_interface.privateip.private_ip_address
+#   }
 
-  provisioner "remote-exec" {
-    inline = [
-        "sudo dnf install python3.12 python3.12-pip -y",
-        "sudo pip3.12 install ansible",
-        "ansible-pull -i localhost, -U https://github.com/sagarmech98/roboshop-ansible roboshop.yaml -e app_name=${var.name} -e env=dev"  
-    ]
-    }
-  }
+#   provisioner "remote-exec" {
+#     inline = [
+#         "sudo dnf install python3.12 python3.12-pip -y",
+#         "sudo pip3.12 install ansible",
+#         "ansible-pull -i localhost, -U https://github.com/sagarmech98/roboshop-ansible roboshop.yaml -e app_name=${var.name} -e env=dev"  
+#     ]
+#     }
+#   }
 
 resource "azurerm_dns_a_record" "dns_record" {
   name                = "${var.name}-dev"
