@@ -17,7 +17,8 @@ module "databases" {
   zone_name                  = var.zone_name
   network_security_group_id  = var.network_security_group_id
   dns_record_rg_name         = var.dns_record_rg_name
-  token = var.token
+  token                      = var.token
+  type                       = "db"
 }
 
 
@@ -33,5 +34,6 @@ module "applications" {
   zone_name                  = var.zone_name
   network_security_group_id  = var.network_security_group_id
   dns_record_rg_name         = var.dns_record_rg_name
-  token = var.token
+  token                      = var.token
+  type                       = "db" 
 }
